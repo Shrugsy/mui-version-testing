@@ -11,8 +11,8 @@ const useFormField = (initialValue: string, label: string) => {
   );
   const clearValue = useCallback(() => setValue(""), []);
   return [
-    { value, onChange, label },
-    { clearValue, setValue }
+    { value, onChange, label, id: label },
+    { clearValue, setValue },
   ] as const;
 };
 
